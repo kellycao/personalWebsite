@@ -2,6 +2,18 @@ body{
   margin: 0;
   padding: 0;
 background-color: #E8F2D0;
+color:#730217;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+}
+
+#project{
+  position: relative;
+  margin-left: 0;
+  margin-top: 120px;
 }
 
 .timeLine{
@@ -78,11 +90,27 @@ position: relative;
 
   100% {
     visibility: visible;
-    background-color: rgba(232,242,208, .75);
+    background-color: rgba(232, 242, 208, .75);
     color: rgba(115,2,23, 1);
   }
 }
 
+
+.projectTime{
+  position: relative;
+  margin-left: 20%;
+  margin-top: 180px;
+  z-index: 2;
+  padding: 20px;
+  height: 1200px;
+  width:50px;
+}
+
+.year{
+  margin-bottom: 290px;
+  font-size: 40px;
+  visibility: hidden;
+}
 
 #y2019_1 {
   background-image: url("images/kitchen-survival.png");
