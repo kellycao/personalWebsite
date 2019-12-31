@@ -1,0 +1,107 @@
+body{
+  margin: 0;
+  padding: 0;
+background-color: #E8F2D0;
+}
+
+.timeLine{
+  width: 1000px;
+  margin: 50px auto;
+  list-style: none;
+}
+
+.timeLine li{
+  padding: 10px;
+  min-height: 310px;
+border-left: 6px solid #730217;
+position: relative;
+}
+
+.timeLine li::before{
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: #46010B;
+  border-radius: 50%;
+  top:-15px;
+  left: -15.5px;
+}
+
+.timeLine li:nth-child(3)::before{
+  background-color: transparent;
+
+}
+
+.timeLine li:last-child{
+  border-color: transparent;
+}
+
+.section {
+  margin: 1em auto;
+  margin-left: 5em;
+  position: relative;
+  width: 370px;
+  height: 280px;
+  border: 2px solid #730217;
+  float: left;
+  z-index: 3;
+}
+
+.section:hover .description {
+  animation: visib .4s forwards;
+}
+
+.description {
+  position: relative;
+  margin: auto;
+  width: 370px;
+  height: 280px;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  z-index: 4;
+  font-size: 30px;
+  visibility: hidden;
+}
+
+.description:hover{
+  cursor: pointer;
+}
+
+@keyframes visib {
+  0% {
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(255, 255, 255, 0);
+  }
+
+  100% {
+    visibility: visible;
+    background-color: rgba(232,242,208, .75);
+    color: rgba(115,2,23, 1);
+  }
+}
+
+
+#y2019_1 {
+  background-image: url("images/kitchen-survival.png");
+  background-size: cover;
+}
+
+#y2019_2 {
+  background-image: url("images/musices2.png");
+  background-size: contain;
+  background-position: center;
+}
+
+#y2019_3 {
+  background-image: url("images/xianjian.png");
+  background-size: 370px 300px;
+}
+
+#y2017_1 {
+  background-image: url("images/hmxgreen.png");
+  background-size: contain;
+  background-position: center;
+}
