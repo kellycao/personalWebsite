@@ -58,8 +58,6 @@ section2019_3.onmouseout= function(){
   year[1].style.animation="none";
 }
 
-
-
 section2020_1.onmouseover= function(){
   year[2].style.animation="visib .4s forwards";
 }

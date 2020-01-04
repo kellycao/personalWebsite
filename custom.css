@@ -5,6 +5,7 @@ body{
   height:100%;
 background-color: #E8F2D0;
 color:#730217;
+font-family: "STXinwei";
 }
 
 .row{
@@ -71,13 +72,14 @@ position: relative;
 .description {
   position: relative;
   margin: auto;
+  padding: 0 20px;
   width: 370px;
   height: 280px;
   display: table-cell;
   text-align: center;
   vertical-align: middle;
   z-index: 4;
-  font-size: 30px;
+  font-size: 40px;
   visibility: hidden;
 }
 
@@ -103,7 +105,7 @@ position: relative;
 .projectTime{
   position: relative;
   left: 18%;
-  margin-top: 180px;
+  margin-top: 170px;
   z-index: 2;
   padding: 20px;
   height: 1200px;
@@ -112,7 +114,7 @@ position: relative;
 
 .year{
   margin-bottom: 290px;
-  font-size: 40px;
+  font-size: 45px;
   visibility: hidden;
 }
 
@@ -136,4 +138,9 @@ position: relative;
   background-image: url("images/hmxgreen.png");
   background-size: contain;
   background-position: center;
+}
+
+#temp{
+  visibility: visible;
+  animation: none;
 }
