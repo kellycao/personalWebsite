@@ -9,7 +9,7 @@ var year=document.getElementsByClassName("year");
 
 section2017_1.onclick = function(){
   var pdf = 'HMxGreenDesign_YuxinCao.pdf';
-  window.open('kellycao.github.io/personalWebsite/js/pdf/' + pdf, 'PDF');
+  window.open('../js/pdf/web/viewer.html?file=http://kellycao.github.io/personalWebsite/pdf/' + pdf, 'PDF');
 };
 
 // section2017_1.onmouseover= function(){
@@ -22,7 +22,7 @@ section2017_1.onclick = function(){
 
 section2019_1.onclick = function(){
   var pdf = 'MSTU4040_FinalProject_YuxinCao.pdf';
-  window.open('../js/pdf/web/viewer.html?file=http://127.0.0.1:3000/pdf/' + pdf, 'PDF');
+  window.open('../js/pdf/web/viewer.html?file=http://kellycao.github.io/personalWebsite/pdf/' + pdf, 'PDF');
 };
 
 // section2019_1.onmouseover= function(){
@@ -35,7 +35,7 @@ section2019_1.onclick = function(){
 
 section2019_2.onclick = function(){
   var pdf = 'MSTU4083_FinalProject_YuxinCao.pdf';
-  window.open('../js/pdf/web/viewer.html?file=http://127.0.0.1:3000/pdf/' + pdf, 'PDF');
+  window.open('../js/pdf/web/viewer.html?file=http://kellycao.github.io/personalWebsite/pdf/' + pdf, 'PDF');
 };
 
 // section2019_2.onmouseover= function(){
@@ -48,7 +48,7 @@ section2019_2.onclick = function(){
 
 section2019_3.onclick = function(){
   var pdf = 'AHA5060_FinalProject_YuxinCao.pdf';
-  window.open('../js/pdf/web/viewer.html?file=http://127.0.0.1:3000/pdf/' + pdf, 'PDF');
+  window.open('../js/pdf/web/viewer.html?file=http://kellycao.github.io/personalWebsite/pdf/' + pdf, 'PDF');
 };
 
 // section2019_3.onmouseover= function(){
