@@ -30,8 +30,8 @@ body{
   display: flex;
   width: 45%;
   margin: 30px 0;
-  border: 2px solid #00382A;
-  box-shadow: 2px 2px 5px #00382A;
+  border: 3px solid #00382A;
+  box-shadow: 1px 1px 5px #00382A;
   border-radius: 10%;
 }
 

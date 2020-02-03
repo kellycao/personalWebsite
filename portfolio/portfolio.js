@@ -5,11 +5,16 @@ var section2019_2 = document.getElementById('y2019_2');
 var section2019_3 = document.getElementById('y2019_3');
 var section2019_4 = document.getElementById('y2019_4');
 var section2017_1 = document.getElementById('y2017_1');
+var section2017_2 = document.getElementById('y2017_2');
 var year=document.getElementsByClassName("year");
 
 section2017_1.onclick = function(){
   var pdf = 'HMxGreenDesign_YuxinCao.pdf';
   window.open('../js/pdf/web/viewer.html?file=http://kellycao.github.io/personalWebsite/pdf/' + pdf, 'PDF');
+};
+
+section2017_2.onclick = function(){
+  window.open('https://v.youku.com/v_show/id_XMzk1NDgwODgwNA==.html?spm=a2hzp.8244740.0.0');
 };
 
 // section2017_1.onmouseover= function(){

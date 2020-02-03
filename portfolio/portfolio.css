@@ -145,6 +145,12 @@ position: relative;
   background-position: center;
 }
 
+#y2017_2 {
+  background-image: url("../images/rpgmaker.png");
+  background-size: 370px 300px;
+  background-position: center;
+}
+
 #temp{
   visibility: visible;
   animation: none;
