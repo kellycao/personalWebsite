@@ -1,146 +1,151 @@
-body{
+*{
   margin: 0;
-  padding: 0;
-  width: 100%;
-  height:100%;
-background-color: #E8F2D0;
-color:#730217;
-font-family: "STXinwei";
+  padding:0;
+  box-sizing: border-box;
+  font-family: "STXinwei";
 }
 
-.row{
+body{
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #E8F2D0;
+  min-height: 100vh;
+
 }
 
-#project{
+.container{
   position: relative;
-margin:120px auto;
-margin-left: 18%;
-z-index: 999;
-}
-
-.timeLine{
   width: 1000px;
-  margin: 50px auto;
-  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 30px;
 }
 
-.timeLine li{
-  padding: 10px;
-  min-height: 310px;
-border-left: 6px solid #730217;
-position: relative;
+.container .card{
+  position: relative;
+  height: 250px;
+  background: #fff;
+  display: flex;
+  width: 45%;
+  margin: 30px 0;
+  border-radius: 10%;
 }
 
-.timeLine li::before{
-  content: '';
+.container .card .imgBx{
+position:absolute;
+top:0;
+left: 0;
+width: 100%;
+height: 100%;
+background: #00382A;
+z-index:1;
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+transition: 0.5s ease-in-out;
+border-radius: 10%;
+}
+
+.container .card:hover .imgBx{
+  width: 120px;
+  height: 120px;
+  left: -60px;
+  top: calc(50% - 60px);
+  transition: 0.5s ease-in-out;
+  background: #730217;
+  border-radius: 20%;
+}
+
+.container .card .imgBx:before{
+  content: attr(data-text);
   position: absolute;
-  width: 25px;
-  height: 25px;
-  background-color: #46010B;
-  border-radius: 50%;
-  top:-15px;
-  left: -15.5px;
-}
-
-.timeLine li:nth-child(3)::before{
-  background-color: transparent;
-
-}
-
-.timeLine li:last-child{
-  border-color: transparent;
-}
-
-.section {
-  margin: 1em auto;
-  margin-left: 5em;
-  position: relative;
-  width: 370px;
-  height: 280px;
-  border: 2px solid #730217;
-  float: left;
-  z-index: 3;
-  box-shadow: 2px 2px 5px #730217;
-}
-
-.section:hover .description {
-  animation: visib .4s forwards;
-}
-
-.description {
-  position: relative;
-  margin: auto;
-  padding: 0 20px;
-  width: 370px;
-  height: 280px;
-  display: table-cell;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   text-align: center;
-  vertical-align: middle;
-  z-index: 4;
-  font-size: 40px;
-  visibility: hidden;
+  font-size: 5em;
+  color: rgba(255, 255, 255, .1);
+  font-weight: 100;
 }
 
-.description:hover{
-  cursor: pointer;
+.container .card .imgBx img{
+  max-width: 150px;
+  transition: 0.5s ease-in-out;
 }
 
-@keyframes visib {
-  0% {
-    visibility: hidden;
-    background-color: rgba(0, 0, 0, 0);
-    color: rgba(255, 255, 255, 0);
-  }
-
-  100% {
-    visibility: visible;
-    background-color: rgba(232, 242, 208, .75);
-    color: rgba(115,2,23, 1);
-  }
+.container .card:hover .imgBx img{
+  max-width: 100px;
 }
 
-
-.projectTime{
-  position: relative;
-  left: 18%;
-  margin-top: 170px;
-  z-index: 2;
+.container .card .content{
+  position: absolute;
+  right: 0;
+  width: calc(100% - 75px);
+  height: 100%;
   padding: 20px;
-  height: 1200px;
-  width:50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+
 }
 
-.year{
-  margin-bottom: 290px;
-  font-size: 45px;
-  visibility: hidden;
+.container .card .content h3{
+  margin-bottom: 5px;
+  font-size: 24px;
 }
 
-#y2019_1 {
-  background-image: url("images/kitchen-survival.png");
-  background-size: cover;
+.container .card .content a{
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  background: #00382A;
+  text-decoration: none;
+  color: #fff;
 }
 
-#y2019_2 {
-  background-image: url("images/musices2.png");
-  background-size: contain;
-  background-position: center;
+@media (max-width: 992px){
+  .container{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container .card{
+    width: 400px;
+  }
 }
 
-#y2019_3 {
-  background-image: url("images/xianjian.png");
-  background-size: 370px 300px;
+@media (max-width: 768px){
+
+  .container .card{
+    max-width: 300px;
+    flex-direction: column;
+    border-radius:0;
+    height: auto;
+  }
+  .container .card .imgBx{
+    position: relative;
+    border-radius: 0;
+  }
+  .container .card .imgBx,
+  .container .card:hover .imgBx{
+    width: 100%;
+    height: 120px;
+    left:0;
+    border-radius: 0;
+  }
+  .container .card .imgBx img,
+  .container .card:hover .imgBx img{
+  max-width: 100px;
+  }
+.container .card .content{
+  position: relative;
+  width: 100%;
 }
 
-#y2017_1 {
-  background-image: url("images/hmxgreen.png");
-  background-size: contain;
-  background-position: center;
-}
-
-#temp{
-  visibility: visible;
-  animation: none;
 }

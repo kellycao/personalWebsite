@@ -1,0 +1,202 @@
+body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height:100%;
+background-color: #E8F2D0;
+color:#730217;
+font-family: "STXinwei";
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+}
+
+#project{
+  position: relative;
+margin:120px auto;
+margin-left: 13%;
+z-index: 999;
+}
+
+.timeLine{
+  width: 1000px;
+  margin: 50px auto;
+  list-style: none;
+}
+
+.timeLine li{
+  padding: 10px;
+  min-height: 310px;
+border-left: 6px solid #730217;
+position: relative;
+}
+
+.timeLine li::before{
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: #46010B;
+  border-radius: 50%;
+  top:-15px;
+  left: -15.5px;
+}
+
+.timeLine li:nth-child(3)::before{
+  background-color: transparent;
+
+}
+
+.timeLine li:last-child{
+  border-color: transparent;
+}
+
+.section {
+  margin: 1em auto;
+  margin-left: 5em;
+  position: relative;
+  width: 370px;
+  height: 280px;
+  border: 2px solid #730217;
+  float: left;
+  z-index: 3;
+  box-shadow: 2px 2px 5px #730217;
+}
+
+.section:hover .description {
+  animation: visib .4s forwards;
+}
+
+.description {
+  position: relative;
+  margin: auto;
+  padding: 0 20px;
+  width: 370px;
+  height: 280px;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  z-index: 4;
+  font-size: 40px;
+  visibility: hidden;
+}
+
+.description:hover{
+  cursor: pointer;
+}
+
+@keyframes visib {
+  0% {
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(255, 255, 255, 0);
+  }
+
+  100% {
+    visibility: visible;
+    background-color: rgba(232, 242, 208, .75);
+    color: rgba(115,2,23, 1);
+  }
+}
+
+
+.projectTime{
+  position: relative;
+  left: 13%;
+  margin-top: 170px;
+  z-index: 2;
+  padding: 20px;
+  height: 1200px;
+  width:50px;
+}
+
+.year{
+  margin-bottom: 320px;
+  font-size: 40px;
+}
+
+#y2019_1 {
+  background-image: url("../images/musices2.png");
+  background-size: contain;
+  background-position: center;
+}
+
+#y2019_2 {
+  background-image: url("../images/kitchen-survival.png");
+ background-size: cover;
+}
+
+#y2019_3 {
+  background-image: url("../images/xianjian.png");
+  background-size: 370px 300px;
+}
+
+#y2019_4 {
+  background-image: url("../images/bread.png");
+  background-size: contain;
+  background-position: center;
+}
+
+#y2017_1 {
+  background-image: url("../images/hmxgreen.png");
+  background-size: contain;
+  background-position: center;
+}
+
+#temp{
+  visibility: visible;
+  animation: none;
+}
+
+
+
+
+@media (max-width: 768px){
+
+  .timeLine{
+    /* max-width: 300px; */
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    margin-left: -9em;
+  }
+
+.section, .description{
+    /* height: 120px; */
+    width: 185px;
+    height: 140px;
+    font-size: 20px;
+    /* left:0; */
+  }
+
+  .description{
+    visibility: visible;
+    background-color: rgba(232, 242, 208, .5);
+    color: rgba(115,2,23, 1);
+  }
+
+  .timeLine li{
+  border-left: none;
+  position: relative;
+  min-height: 155px;
+  }
+
+  .timeLine li::before{
+display: none;
+  }
+  .projectTime{
+    position: relative;
+    left: 0;
+    margin-top: 170px;
+    z-index: -1;
+    padding: 20px;
+  }
+
+  .year{
+display: none;
+  }
+
+}
